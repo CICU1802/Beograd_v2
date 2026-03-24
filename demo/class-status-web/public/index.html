@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCMUE - Danh sách tình trạng lớp học phần</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    <main class="page-shell">
+        <section class="hero">
+            <h1>BEOGRAD - Danh sách tình trạng lớp học phần</h1>
+            <div class="stats" id="stats"></div>
+        </section>
+
+        <section class="panel filters">
+            <div class="field field-grow">
+                <label for="keyword">Nhập mã học phần</label>
+                <input id="keyword" type="text" placeholder="Ví dụ: POLI1001" />
+            </div>
+            <div class="field">
+                <label for="semester">Chọn học kỳ</label>
+                <select id="semester"></select>
+            </div>
+            <div class="field">
+                <label for="status">Tình trạng</label>
+                <select id="status">
+                    <option value="all">Tất cả</option>
+                    <option value="open">Cho Sinh viên đăng kí</option>
+                    <option value="cancelled">Hủy</option>
+                </select>
+            </div>
+            <button id="btn-search" class="btn btn-primary">Xem thông tin</button>
+            <button id="btn-copy" class="btn btn-outline">Copy</button>
+            <button id="btn-export" class="btn btn-outline">Excel</button>
+        </section>
+
+        <section class="panel note">
+            --> Dữ liệu của Nhóm môn: <b>Môn chuyên ngành</b>; Khoa: <b>Khoa Công nghệ Thông tin</b>; Lớp học phần:
+            <b>Tất cả</b>
+        </section>
+
+        <section class="panel table-wrap">
+            <div class="table-head">
+                <span id="pager-label">Xem trang 1 / 1</span>
+            </div>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã LHP</th>
+                            <th>Tên HP</th>
+                            <th>Số TC</th>
+                            <th>Tình trạng LHP</th>
+                            <th>Lớp sinh viên</th>
+                            <th>Sĩ số</th>
+                            <th>Số lượng đã đk</th>
+                            <th>Ngày BĐ</th>
+                            <th>Ngày KT</th>
+                            <th>Thời khóa biểu</th>
+                            <th>Giảng viên</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+            <div class="pager-actions">
+                <button id="btn-prev" class="btn btn-outline">Trang trước</button>
+                <button id="btn-next" class="btn btn-outline">Trang sau</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+
+</html>

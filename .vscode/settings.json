@@ -1,0 +1,7 @@
+{
+    "typescript.tsdk": "demo/frontend/node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "problems.exclude": {
+        "**/node_modules/**": true
+    }
+}
