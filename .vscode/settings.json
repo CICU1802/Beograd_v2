@@ -3,5 +3,6 @@
     "typescript.enablePromptUseWorkspaceTsdk": true,
     "problems.exclude": {
         "**/node_modules/**": true
-    }
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:system"
 }
